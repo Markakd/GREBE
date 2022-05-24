@@ -1,0 +1,6 @@
+# {Threaded:false Collide:false Repeat:false RepeatTimes:0 Procs:1 Sandbox: Fault:false FaultCall:-1 FaultNth:0 Leak:false NetInjection:false NetDevices:false NetReset:false Cgroups:false BinfmtMisc:false CloseFDs:false KCSAN:false DevlinkPCI:false USB:false VhciInjection:false UseTmpDir:false HandleSegv:false Repro:false Trace:false}
+r0 = add_key$keyring(&(0x7f0000000180)='keyring\x00', &(0x7f00000001c0)={'syz', 0x2}, 0x0, 0x0, 0xfffffffffffffffd)
+keyctl$dh_compute(0x17, &(0x7f0000000280)={r2, r3, r3}, &(0x7f0000000440)=""/53, 0x35, &(0x7f0000000540)={&(0x7f00000004c0)={'sha384-generic\x00'}})
+r1 = add_key$keyring(&(0x7f0000000140)='keyring\x00', &(0x7f0000000300)={'syz', 0x0}, 0x0, 0x0, r0)
+r2 = add_key$user(&(0x7f0000000480)='user\x00', &(0x7f0000000000)={'syz', 0x0}, &(0x7f0000000080)="b0", 0x1, 0xffffffffffffffff)
+r3 = add_key$user(&(0x7f00000000c0)='user\x00', &(0x7f00000002c0)={'syz', 0x1}, &(0x7f0000000840)="a842f0f9a859e78d0f1a0bb4056fc35b685e34cfc5fc3b12236d5bc7bf9544efc742e1704603e440c2646df0827f8f7d82902c80d08492fb82c249a42e404044bbee24230e94d4be17701b8ab7100a8ef4993a5fc4bfcbbadd3d85f94bcd44d2bba9c77a1f89ee4ef4ffdce2266d2c96c07f093546d6b6a2b014ab9b292b77836a1c3503afc1fb7011f3d84f9690d2f07db816caf6beea51bca85a0ac2be5e4d010dc4f8a27ac12d948333dcb7f0087a616edf403c479a8ae4e8ccf905909cc94e7affbc806034cb6741c7c14636c7621ba27082eda8949132", 0xd9, r1)

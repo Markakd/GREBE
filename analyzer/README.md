@@ -1,6 +1,6 @@
 # Step 1: build kernel bitcode
-Follow [here](https://github.com/Markakd/LLVM-O0-BitcodeWriter) to build a clang to would generate bitcode for you, then build kernel as usual but make sure you are building with our custimized clang.
 
+Download llvm-10.0.1 [source code](https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.1/llvm-project-10.0.1.tar.xz) and build it with this [patch](https://github.com/Markakd/LLVM-O0-BitcodeWriter/blob/master/WriteBitcode.patch) applied to get a customized clang, then build kernel with our custimized clang to get unoptimized bitcode.
 
 # Step 2: build the analyzer
 The analyzer depends on llvm-10, so make sure llvm-10 is installed. Follow [here](https://apt.llvm.org/) to install llvm-10.

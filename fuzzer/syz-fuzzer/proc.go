@@ -123,6 +123,10 @@ func (proc *Proc) loop() {
 				proc.smashInput(item)
 				execMu.Unlock()
 			case *WorkSeed:
+				if len(item.p.Calls) == 0 {
+					continue
+				}
+
 				proc.fuzzer.enableCorpusSyscall(item.p)
 
 				if proc.fuzzer.spliceEnabled {

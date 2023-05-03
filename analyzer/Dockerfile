@@ -23,7 +23,7 @@ RUN useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME || usermod -u $UID $UNAME
 # Copy all files from GREBE/analyzer repository.
 RUN mkdir -p $WORKDIR
 ADD ./* $WORKDIR
-ADD ./src $WORKDIR
+COPY ./src $WORKDIR/src
 
 WORKDIR $WORKDIR
 # Install latest stable LLVM from upstream.

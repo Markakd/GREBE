@@ -10,6 +10,7 @@ RUN apt install -y libstdc++-10-dev \
     patch \
     cmake \
     lsb-release software-properties-common gnupg \
+    flex bison build-essential bc libssl-dev libelf-dev \
     g++
 
 ARG WORKDIR=/workspace/

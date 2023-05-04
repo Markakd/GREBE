@@ -1,3 +1,7 @@
+### Usage:
+###   docker build -t analyzer --build-arg UID=$(id -u) --build-arg GID=$(id -g) .
+###   docker run --rm -v /host:/host -ti analyzer /bin/bash
+###   user@container:/workspace $ WORKDIR=/workspace KERNEL_SRC=/host/linux KASAN_LOG=/host/kasan.log ./run.sh 
 FROM ubuntu:20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
